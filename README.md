@@ -64,7 +64,7 @@ It showcases curated home décor products with smooth UI interactions, category 
 
 ## 📁 Project Structure
 **bari-vibes/**
-├── index.html
-├── style.css
-├── script.js
-└── README.md
+ ├── index.html
+ ├── style.css
+ ├── script.js
+ └── README.md
