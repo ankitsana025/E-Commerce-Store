@@ -64,7 +64,14 @@ It showcases curated home décor products with smooth UI interactions, category 
 
 ## 📁 Project Structure
 **bari-vibes/**
- ├── index.html
- ├── style.css
- ├── script.js
- └── README.md
+ -├── index.html
+ -├── style.css
+ -├── script.js
+ -└── README.md
+
+---
+
+## 📸 Screenshots
+ <img width="1900" height="973" alt="image" src="https://github.com/user-attachments/assets/68e40edc-d0f4-45e7-927f-0806fe786c52" />
+ <img width="1285" height="800" alt="image" src="https://github.com/user-attachments/assets/69d13c86-0cf4-4458-ac34-a6173533a0a9" />
+
