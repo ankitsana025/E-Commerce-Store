@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bari Vibes | Classic Home Décor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">Bari Vibes</div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">Collections</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="header-right">
+    <button id="theme-toggle">🌙</button>
+    <div class="cart">🛒 <span id="cart-count">0</span></div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Timeless Elegance for Every Home</h1>
+    <p>Classic décor inspired by tradition & comfort</p>
+  </div>
+</section>
+
+<!-- CATEGORY FILTER -->
+<section class="categories">
+  <button onclick="filterProducts('all')">All</button>
+  <button onclick="filterProducts('wall')">Wall Décor</button>
+  <button onclick="filterProducts('furniture')">Furniture</button>
+  <button onclick="filterProducts('lighting')">Lighting</button>
+  <button onclick="filterProducts('soft')">Soft Furnishings</button>
+</section>
+
+<!-- PRODUCTS -->
+<main class="products">
+
+  <!-- WALL DECOR -->
+  <div class="product wall">
+    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+    <h3>Classic Wall Clock</h3>
+    <p class="desc">Vintage silent clock with brass finish.</p>
+    <p class="price">₹1,099</p>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <div class="product wall">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+    <h3>Royal Wall Painting</h3>
+    <p class="desc">Elegant canvas art for living rooms.</p>
+    <p class="price">₹2,499</p>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <!-- FURNITURE -->
+  <div class="product furniture">
+    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7">
+    <h3>Classic Sofa Set</h3>
+    <p class="desc">Premium comfort with timeless design.</p>
+    <p class="price">₹18,999</p>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <div class="product furniture">
+    <img src="https://images.unsplash.com/photo-1616627456018-6c0c7c1d2f14">
+    <h3>Wooden Coffee Table</h3>
+    <p class="desc">Solid wood handcrafted table.</p>
+    <p class="price">₹6,499</p>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <!-- LIGHTING -->
+  <div class="product lighting">
+    <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed">
+    <h3>Antique Table Lamp</h3>
+    <p class="desc">Warm ambient lighting with brass base.</p>
+    <p class="price">₹1,699</p>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <div class="product lighting">
+    <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4">
+    <h3>Hanging Pendant Light</h3>
+    <p class="desc">Classic ceiling décor light.</p>
+    <p class="price">₹2,299</p>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <!-- SOFT FURNISHINGS -->
+  <div class="product soft">
+    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92">
+    <h3>Ceramic Flower Vase</h3>
+    <p class="desc">Hand-glazed ceramic vase.</p>
+    <p class="price">₹899</p>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <div class="product soft">
+    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6">
+    <h3>Luxury Cushion Set</h3>
+    <p class="desc">Soft cotton cushions (Set of 4).</p>
+    <p class="price">₹1,499</p>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <h2>Bari Vibes</h2>
+  <p>Classic Living • Elegant Homes • Timeless Comfort</p>
+
+  <div class="footer-links">
+    <a href="#">About</a>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+    <a href="#">Support</a>
+  </div>
+
+  <p class="copy">© 2026 Bari Vibes</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
