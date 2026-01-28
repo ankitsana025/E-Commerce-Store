@@ -7,13 +7,6 @@ It showcases curated home décor products with smooth UI interactions, category 
 
 ---
 
-## ✨ Live Demo
-🔗 https://yourusername.github.io/bari-vibes/
-
-*(Replace `yourusername` with your GitHub username)*
-
----
-
 ## 🎨 Theme & Design
 - **Classical color palette** (cream, brown, gold accents)
 - Elegant typography for a premium interior design feel
@@ -64,10 +57,10 @@ It showcases curated home décor products with smooth UI interactions, category 
 
 ## 📁 Project Structure
 **bari-vibes/**
- -├── index.html
- -├── style.css
- -├── script.js
- -└── README.md
+ - ├── index.html
+ - ├── style.css
+ - ├── script.js
+ - └── README.md
 
 ---
 
