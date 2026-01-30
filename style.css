@@ -3,6 +3,10 @@
   font-family: "Georgia", serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: #f6f1e7;
@@ -32,14 +36,6 @@ nav a {
   text-decoration: none;
 }
 
-#theme-toggle {
-  background: none;
-  border: none;
-  font-size: 22px;
-  color: #fdf6e3;
-  cursor: pointer;
-}
-
 /* HERO */
 .hero {
   height: 320px;
@@ -47,7 +43,6 @@ nav a {
     url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c"),
     url("https://images.unsplash.com/photo-1586023492125-27b2c045efd7");
   background-size: cover;
-  background-position: 0% 50%;
   animation: moveBg 35s linear infinite;
   display: flex;
   justify-content: center;
@@ -64,22 +59,6 @@ nav a {
   color: #fdf6e3;
   padding: 25px 40px;
   border-radius: 10px;
-}
-
-/* CATEGORIES */
-.categories {
-  text-align: center;
-  padding: 20px;
-}
-
-.categories button {
-  background: #d4af37;
-  border: none;
-  padding: 10px 16px;
-  margin: 5px;
-  cursor: pointer;
-  color: #3b2f2f;
-  border-radius: 5px;
 }
 
 /* PRODUCTS */
@@ -106,16 +85,6 @@ nav a {
   border-radius: 8px;
 }
 
-.desc {
-  font-size: 14px;
-  margin: 5px 0;
-}
-
-.price {
-  font-weight: bold;
-  color: #4b3621;
-}
-
 .product button {
   width: 100%;
   background: #4b3621;
@@ -137,6 +106,31 @@ footer {
   color: #d4af37;
   margin: 0 10px;
   text-decoration: none;
+}
+
+/* CONTACT */
+.contact-section {
+  margin-top: 25px;
+}
+
+.contact-section h3 {
+  color: #d4af37;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.social-links img {
+  width: 34px;
+  filter: invert(1);
+  transition: transform 0.3s;
+}
+
+.social-links img:hover {
+  transform: scale(1.15);
 }
 
 /* DARK MODE */
