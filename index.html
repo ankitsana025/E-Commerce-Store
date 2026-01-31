@@ -13,131 +13,133 @@
 
   <nav>
     <a href="#">Home</a>
-    <a href="#">Shop</a>
-    <a href="#">Collections</a>
+    <a href="#products">Shop</a>
     <a href="#contact">Contact</a>
   </nav>
-
-  <div class="header-right">
-    <button id="theme-toggle">🌙</button>
-    <div class="cart">🛒 <span id="cart-count">0</span></div>
-  </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-text">
-    <h1>Timeless Elegance for Every Home</h1>
-    <p>Classic décor inspired by tradition & comfort</p>
-  </div>
-</section>
-
-<!-- CATEGORY FILTER -->
+<!-- CATEGORIES -->
 <section class="categories">
-  <button onclick="filterProducts('all')">All</button>
-  <button onclick="filterProducts('wall')">Wall Décor</button>
-  <button onclick="filterProducts('furniture')">Furniture</button>
-  <button onclick="filterProducts('lighting')">Lighting</button>
-  <button onclick="filterProducts('soft')">Soft Furnishings</button>
+  <button class="active" onclick="setActive(this);filterProducts('all')">All</button>
+  <button onclick="setActive(this);filterProducts('wall')">Wall Décor</button>
+  <button onclick="setActive(this);filterProducts('furniture')">Furniture</button>
+  <button onclick="setActive(this);filterProducts('lighting')">Lighting</button>
+  <button onclick="setActive(this);filterProducts('soft')">Soft Furnishings</button>
 </section>
 
 <!-- PRODUCTS -->
-<main class="products">
+<main class="products" id="products">
 
-  <div class="product wall">
+  <!-- WALL -->
+  <div class="product wall" onclick="openProduct(
+    'Classic Wall Clock',
+    '₹1,099',
+    'Vintage silent clock with brass finish.',
+    'https://images.unsplash.com/photo-1505691938895-1758d7feb511'
+  )">
     <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
     <h3>Classic Wall Clock</h3>
-    <p class="desc">Vintage silent clock with brass finish.</p>
     <p class="price">₹1,099</p>
-    <button onclick="addToCart()">Add to Cart</button>
   </div>
 
-  <div class="product wall">
+  <div class="product wall" onclick="openProduct(
+    'Royal Wall Painting',
+    '₹2,499',
+    'Elegant canvas art perfect for living rooms.',
+    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c'
+  )">
     <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
     <h3>Royal Wall Painting</h3>
-    <p class="desc">Elegant canvas art for living rooms.</p>
     <p class="price">₹2,499</p>
-    <button onclick="addToCart()">Add to Cart</button>
   </div>
 
-  <div class="product furniture">
+  <!-- FURNITURE -->
+  <div class="product furniture" onclick="openProduct(
+    'Classic Sofa Set',
+    '₹18,999',
+    'Premium comfort with timeless classic design.',
+    'https://images.unsplash.com/photo-1586023492125-27b2c045efd7'
+  )">
     <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7">
     <h3>Classic Sofa Set</h3>
-    <p class="desc">Premium comfort with timeless design.</p>
     <p class="price">₹18,999</p>
-    <button onclick="addToCart()">Add to Cart</button>
   </div>
 
-  <div class="product furniture">
-    <img src="https://images.unsplash.com/photo-1616627456018-6c0c7c1d2f14">
-    <h3>Wooden Coffee Table</h3>
-    <p class="desc">Solid wood handcrafted table.</p>
-    <p class="price">₹6,499</p>
-    <button onclick="addToCart()">Add to Cart</button>
-  </div>
+  <div class="product furniture" onclick="openProduct(
+  'Wooden Coffee Table',
+  '₹6,499',
+  'Solid wood handcrafted coffee table.',
+  'https://www.furniselan.com/cdn/shop/products/cuttack-solid-wood-coffee-table-684246.jpg?v=1691974526'
+)">
+  <img src="https://www.furniselan.com/cdn/shop/products/cuttack-solid-wood-coffee-table-684246.jpg?v=1691974526">
+  <h3>Wooden Coffee Table</h3>
+  <p class="price">₹6,499</p>
+</div>
 
-  <div class="product lighting">
+
+  <!-- LIGHTING -->
+  <div class="product lighting" onclick="openProduct(
+    'Antique Table Lamp',
+    '₹1,699',
+    'Warm ambient lighting with antique brass base.',
+    'https://images.unsplash.com/photo-1615874959474-d609969a20ed'
+  )">
     <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed">
     <h3>Antique Table Lamp</h3>
-    <p class="desc">Warm ambient lighting with brass base.</p>
     <p class="price">₹1,699</p>
-    <button onclick="addToCart()">Add to Cart</button>
   </div>
 
-  <div class="product lighting">
+  <div class="product lighting" onclick="openProduct(
+    'Hanging Pendant Light',
+    '₹2,299',
+    'Classic ceiling pendant for dining areas.',
+    'https://images.unsplash.com/photo-1519710164239-da123dc03ef4'
+  )">
     <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4">
     <h3>Hanging Pendant Light</h3>
-    <p class="desc">Classic ceiling décor light.</p>
     <p class="price">₹2,299</p>
-    <button onclick="addToCart()">Add to Cart</button>
   </div>
 
-  <div class="product soft">
-    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92">
-    <h3>Ceramic Flower Vase</h3>
-    <p class="desc">Hand-glazed ceramic vase.</p>
-    <p class="price">₹899</p>
-    <button onclick="addToCart()">Add to Cart</button>
-  </div>
-
-  <div class="product soft">
+  <!-- SOFT -->
+  <div class="product soft" onclick="openProduct(
+    'Luxury Cushion Set',
+    '₹1,499',
+    'Soft cotton cushion set (Pack of 4).',
+    'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6'
+  )">
     <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6">
     <h3>Luxury Cushion Set</h3>
-    <p class="desc">Soft cotton cushions (Set of 4).</p>
     <p class="price">₹1,499</p>
-    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <div class="product soft" onclick="openProduct(
+    'Ceramic Flower Vase',
+    '₹899',
+    'Hand-glazed ceramic vase for décor.',
+    'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92'
+  )">
+    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92">
+    <h3>Ceramic Flower Vase</h3>
+    <p class="price">₹899</p>
   </div>
 
 </main>
 
-<!-- FOOTER -->
+<!-- FOOTER / CONTACT -->
 <footer id="contact">
   <h2>Bari Vibes</h2>
   <p>Classic Living • Elegant Homes • Timeless Comfort</p>
 
-  <div class="footer-links">
-    <a href="#">About</a>
-    <a href="#">Privacy</a>
-    <a href="#">Terms</a>
-    <a href="#">Support</a>
+  <div class="social-links">
+  <a href="https://x.com/sana_ankit_025" target="_blank"><img src="https://github.com/user-attachments/assets/b420c84e-c133-4c9a-98bb-d3a1be649c7d" alt="X" width="30" /></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://linkedin.com/in/ankit-sana-aa4264351" target="_blank"><img src="https://github.com/user-attachments/assets/fb50cce7-ad65-45d9-abf9-7d007ea585fd" alt="LinkedIn" width="30" /></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.instagram.com/ankit_sana_025" target="_blank"><img src="https://github.com/user-attachments/assets/e0349ef2-1edc-4a55-b430-48bbf0008a56" alt="Instagram" width="30" /></a>
+</p>
   </div>
 
-  <div class="contact-section">
-    <h3>🌐 Connect with Me</h3>
-    <div class="social-links">
-      <a href="https://x.com/sana_ankit_025" target="_blank">
-        <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg">
-      </a>
-      <a href="https://linkedin.com/in/ankit-sana-aa4264351" target="_blank">
-        <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg">
-      </a>
-      <a href="https://www.instagram.com/ankit_sana_025" target="_blank">
-        <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg">
-      </a>
-    </div>
-  </div>
-
-  <p class="copy">© 2026 Bari Vibes</p>
+  <p>© 2026 Bari Vibes</p>
 </footer>
 
 <script src="script.js"></script>
