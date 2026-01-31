@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Details | Bari Vibes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="product-body">
+
+<main class="product-page">
+  <div class="product-left">
+    <img id="p-img" alt="Product image">
+  </div>
+
+  <div class="product-right">
+    <h1 id="p-name"></h1>
+    <h2 id="p-price"></h2>
+    <p id="p-desc"></p>
+
+    <ul>
+      <li>✔ Premium Quality</li>
+      <li>✔ Free Delivery</li>
+      <li>✔ 7-Day Replacement</li>
+    </ul>
+  </div>
+</main>
+
+<section class="reviews">
+  <h2>⭐ Customer Reviews</h2>
+  <p>⭐⭐⭐⭐⭐ Excellent quality and finish.</p>
+  <p>⭐⭐⭐⭐ Worth the price.</p>
+</section>
+
+<section class="suggestions">
+  <h2>You may also like</h2>
+  <div class="suggest-grid">
+    <div class="suggest-card">Antique Lamp</div>
+    <div class="suggest-card">Luxury Cushion</div>
+    <div class="suggest-card">Wall Painting</div>
+  </div>
+</section>
+
+<div class="sticky-footer">
+  <button class="cart-btn">Add to Cart</button>
+  <button class="buy-btn">Buy Now</button>
+</div>
+
+<script>
+  const product = JSON.parse(localStorage.getItem("product"));
+
+  if (!product) {
+    document.body.innerHTML =
+      "<h2 style='padding:40px'>No product selected. Please go back.</h2>";
+  } else {
+    document.getElementById("p-img").src = product.img;
+    document.getElementById("p-name").textContent = product.name;
+    document.getElementById("p-price").textContent = product.price;
+    document.getElementById("p-desc").textContent = product.desc;
+  }
+</script>
+
+</body>
+</html>
