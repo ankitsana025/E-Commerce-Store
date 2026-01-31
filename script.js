@@ -1,22 +1,23 @@
-let cartCount = 0;
-
-function addToCart() {
-  cartCount++;
-  document.getElementById("cart-count").innerText = cartCount;
+function openProduct(name, price, desc, img) {
+  localStorage.setItem("product", JSON.stringify({
+    name,
+    price,
+    desc,
+    img
+  }));
+  window.location.href = "product.html";
 }
 
 function filterProducts(category) {
-  const products = document.querySelectorAll(".product");
-  products.forEach(product => {
-    product.style.display =
-      category === "all" || product.classList.contains(category)
+  document.querySelectorAll(".product").forEach(p => {
+    p.style.display =
+      category === "all" || p.classList.contains(category)
       ? "block" : "none";
   });
 }
 
-const toggleBtn = document.getElementById("theme-toggle");
-const body = document.body;
-
-toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-});
+function setActive(btn) {
+  document.querySelectorAll(".categories button")
+    .forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+}
